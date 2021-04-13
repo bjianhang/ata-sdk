@@ -12,7 +12,7 @@ ata_url = "https://ata.360.cn/api/v1/task/submit"
 token = "1c2VyX2lkIjo4MCwidXNlcm5hbWUiOiJBVEFcdTZjOTlcdTdiYjFcdTRlOTEiLCJleHAiOjIzODI2NjI3NDAsImVtYWlsIjoiYXRhLXBheUAzNjAuY24ifQ.9857AdeUEUNS4q8fC2dlVPdrE59kSaaxKOZ5Qhtirg8"
 
 
-def submit_file(file_path, token=None, host=None, machine="windows7_sp1_x64_cn_cloud_f21i9j7o10r9", file_type=None, decrypt_https=True, is_public=False, timeout=120, priority=150):
+def submit_file(file_path, token=None, host=None, machine="windows7_sp1_x86_cn_cloud_f21i9j7o10r9", file_type=None, decrypt_https=True, is_public=False, timeout=120, priority=150):
     if not host:
         host = ata_url
     headers = {"Authorization": "JWT {0}".format(token)}
@@ -43,7 +43,7 @@ def submit_file(file_path, token=None, host=None, machine="windows7_sp1_x64_cn_c
         return "failed", response.text.encode("utf8"), file_name
 
 
-def submit_url(url_name, token=None, host=None, machine="windows7_sp1_x64_cn_cloud_f21i9j7o10r9", decrypt_https=True, is_public=False, timeout=120, priority=150):
+def submit_url(url_name, token=None, host=None, machine="windows7_sp1_x86_cn_cloud_f21i9j7o10r9", decrypt_https=True, is_public=False, timeout=120, priority=150):
     if not host:
         host = ata_url
     headers = {"Authorization": "JWT {0}".format(token)}
@@ -71,7 +71,7 @@ def submit_url(url_name, token=None, host=None, machine="windows7_sp1_x64_cn_clo
         return "failed", response.text.encode("utf8"), url_name
 
 
-def submit_md5(md5_name, token=None, host=None, machine="windows7_sp1_x64_cn_cloud_f21i9j7o10r9", decrypt_https=True, is_public=False, timeout=120, priority=150):
+def submit_md5(md5_name, token=None, host=None, machine="windows7_sp1_x86_cn_cloud_f21i9j7o10r9", decrypt_https=True, is_public=False, timeout=120, priority=150):
     if not host:
         host = ata_url
     headers = {"Authorization": "JWT {0}".format(token)}
@@ -98,7 +98,7 @@ def submit_md5(md5_name, token=None, host=None, machine="windows7_sp1_x64_cn_clo
         return "failed", response.text.encode("utf8"), md5_name
 
 
-def submit_stream(file_path, content, token=None, host=None, machine="windows7_sp1_x64_cn_cloud_f21i9j7o10r9", file_type=None, decrypt_https=True, is_public=False, timeout=120, priority=150):
+def submit_stream(file_path, content, token=None, host=None, machine="windows7_sp1_x86_cn_cloud_f21i9j7o10r9", file_type=None, decrypt_https=True, is_public=False, timeout=120, priority=150):
     if not host:
         host = ata_url
     filename = os.path.basename(file_path)
